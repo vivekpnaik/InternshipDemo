@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Domains - InterviewPrep Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="programming-domains.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">InterviewPrep Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><button id="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="programming-container">
+        <h1>Developers and Programmers</h1>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search programming languages..." id="searchInput">
+        </div>
+        <div class="programming-grid" id="programmingGrid">
+            <!-- Web Development -->
+            <div class="language-box" data-tags="web frontend markup html" onclick="selectLanguage('Developer', 'HTML')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <h3>HTML</h3>
+                <p>HyperText Markup Language</p>
+            </div>
+            
+            <div class="language-box" data-tags="web frontend styling css" onclick="selectLanguage('Developer', 'CSS')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                <h3>CSS</h3>
+                <p>Cascading Style Sheets</p>
+            </div>
+
+            <div class="language-box" data-tags="web frontend styling preprocessor sass" onclick="selectLanguage('Developer', 'Sass')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
+                <h3>Sass</h3>
+                <p>Syntactically Awesome Stylesheets</p>
+            </div>
+
+            <div class="language-box" data-tags="web frontend javascript js" onclick="selectLanguage('Developer', 'JavaScript')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <h3>JavaScript</h3>
+                <p>Frontend Development</p>
+            </div>
+
+            <div class="language-box" data-tags="web frontend typescript ts" onclick="selectLanguage('Developer', 'TypeScript')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                <h3>TypeScript</h3>
+                <p>Frontend Development</p>
+            </div>
+
+            <div class="language-box" data-tags="web backend php" onclick="selectLanguage('Developer', 'PHP')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                <h3>PHP</h3>
+                <p>Backend Web Development</p>
+            </div>
+
+            <div class="language-box" data-tags="web backend ruby rails" onclick="selectLanguage('Developer', 'Ruby (Rails)')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby">
+                <h3>Ruby (Rails)</h3>
+                <p>Web Application Framework</p>
+            </div>
+
+            <div class="language-box" data-tags="mobile ios swift" onclick="selectLanguage('Developer', 'Swift')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift">
+                <h3>Swift</h3>
+                <p>iOS Development</p>
+            </div>
+
+            <div class="language-box" data-tags="mobile android kotlin" onclick="selectLanguage('Developer', 'Kotlin')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+                <h3>Kotlin</h3>
+                <p>Android Development</p>
+            </div>
+
+            <div class="language-box" data-tags="mobile android java" onclick="selectLanguage('Developer', 'Java')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                <h3>Java</h3>
+                <p>Android Development</p>
+            </div>
+
+            <div class="language-box" data-tags="mobile flutter dart" onclick="selectLanguage('Developer', 'Dart')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                <h3>Dart</h3>
+                <p>Flutter Development</p>
+            </div>
+
+            <div class="language-box" data-tags="mobile react-native javascript" onclick="selectLanguage('Developer', 'React Native')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
+                <h3>React Native</h3>
+                <p>Cross-platform Mobile Development</p>
+            </div>
+
+            <div class="language-box" data-tags="systems c" onclick="selectLanguage('Developer', 'C')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                <h3>C</h3>
+                <p>Systems Programming</p>
+            </div>
+
+            <div class="language-box" data-tags="systems cpp c++" onclick="selectLanguage('Developer', 'C++')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                <h3>C++</h3>
+                <p>Systems and Game Development</p>
+            </div>
+
+            <div class="language-box" data-tags="systems rust" onclick="selectLanguage('Developer', 'Rust')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" alt="Rust">
+                <h3>Rust</h3>
+                <p>Systems Programming</p>
+            </div>
+
+            <div class="language-box" data-tags="systems go golang" onclick="selectLanguage('Developer', 'Go')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go">
+                <h3>Go</h3>
+                <p>Systems and Cloud Development</p>
+            </div>
+
+            <div class="language-box" data-tags="functional haskell" onclick="selectLanguage('Developer', 'Haskell')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg" alt="Haskell">
+                <h3>Haskell</h3>
+                <p>Functional Programming</p>
+            </div>
+
+            <div class="language-box" data-tags="functional elixir" onclick="selectLanguage('Developer', 'Elixir')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg" alt="Elixir">
+                <h3>Elixir</h3>
+                <p>Functional Programming</p>
+            </div>
+
+            <div class="language-box" data-tags="functional fsharp f#" onclick="selectLanguage('Developer', 'F#')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fsharp/fsharp-original.svg" alt="F#">
+                <h3>F#</h3>
+                <p>Functional Programming</p>
+            </div>
+
+            <div class="language-box" data-tags="data python" onclick="selectLanguage('Developer', 'Python')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <h3>Python</h3>
+                <p>General Purpose Programming</p>
+            </div>
+
+            <div class="language-box" data-tags="data r statistics" onclick="selectLanguage('Developer', 'R')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R">
+                <h3>R</h3>
+                <p>Statistical Computing</p>
+            </div>
+
+            <div class="language-box" data-tags="data julia" onclick="selectLanguage('Developer', 'Julia')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/julia/julia-original.svg" alt="Julia">
+                <h3>Julia</h3>
+                <p>Scientific Computing</p>
+            </div>
+
+            <div class="language-box" data-tags="data matlab" onclick="selectLanguage('Developer', 'MATLAB')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB">
+                <h3>MATLAB</h3>
+                <p>Numerical Computing</p>
+            </div>
+
+            <div class="language-box" data-tags="database sql" onclick="selectLanguage('Developer', 'SQL')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="SQL">
+                <h3>SQL</h3>
+                <p>Structured Query Language</p>
+            </div>
+
+            <div class="language-box" data-tags="game csharp c#" onclick="selectLanguage('Developer', 'C#')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
+                <h3>C#</h3>
+                <p>Game Development</p>
+            </div>
+
+            <div class="language-box" data-tags="scripting lua" onclick="selectLanguage('Developer', 'Lua')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+                <h3>Lua</h3>
+                <p>Game Scripting</p>
+            </div>
+
+            <div class="language-box" data-tags="shell bash" onclick="selectLanguage('Developer', 'Bash')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash">
+                <h3>Bash</h3>
+                <p>Shell Scripting</p>
+            </div>
+
+            <div class="language-box" data-tags="shell powershell" onclick="selectLanguage('Developer', 'PowerShell')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="PowerShell">
+                <h3>PowerShell</h3>
+                <p>Windows Shell Scripting</p>
+            </div>
+
+            <div class="language-box" data-tags="data scala apache" onclick="selectLanguage('Developer', 'Scala')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala">
+                <h3>Scala</h3>
+                <p>Big Data Processing</p>
+            </div>
+
+            <div class="language-box" data-tags="markup xml" onclick="selectLanguage('Developer', 'XML')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xml/xml-original.svg" alt="XML">
+                <h3>XML</h3>
+                <p>eXtensible Markup Language</p>
+            </div>
+
+            <div class="no-results">No matching programming languages found.</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: contact@interviewprep.pro</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Interview Street, Career City, 12345</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const programmingGrid = document.getElementById('programmingGrid');
+        const languageBoxes = document.querySelectorAll('.language-box');
+        const noResults = document.querySelector('.no-results');
+
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            let hasResults = false;
+
+            languageBoxes.forEach(box => {
+                const title = box.querySelector('h3').textContent.toLowerCase();
+                const description = box.querySelector('p').textContent.toLowerCase();
+                const tags = box.dataset.tags ? box.dataset.tags.toLowerCase() : '';
+                
+                if (title.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    tags.includes(searchTerm)) {
+                    box.classList.remove('hidden');
+                    hasResults = true;
+                } else {
+                    box.classList.add('hidden');
+                }
+            });
+
+            noResults.style.display = hasResults ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>

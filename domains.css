@@ -1,0 +1,51 @@
+/* Domains page specific styles */
+.domains-container {
+    padding: 120px 2rem 4rem;
+    min-height: 100vh;
+}
+
+.domains-container h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.domain-box {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.domain-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.domain-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.domain-box h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.domain-box p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}

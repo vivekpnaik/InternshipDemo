@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Setup - InterviewPrep Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="interview-setup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">InterviewPrep Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><button id="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="interview-setup-container">
+        <h1>Your Interview</h1>
+        <div class="setup-form">
+            <div class="setup-grid">
+                <div class="form-group">
+                    <label>Profession:</label>
+                    <div class="value" id="selected-profession">Loading...</div>
+                </div>
+                <div class="form-group">
+                    <label>Main Topic/Technology:</label>
+                    <div class="value" id="selected-technology">Loading...</div>
+                </div>
+                <div class="form-group">
+                    <label for="difficulty-level">Level:</label>
+                    <select id="difficulty-level" class="level-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="difficult">Difficult</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="interview-ready">
+                <h2>Your Interview Is Ready</h2>
+                <p>We've prepared a comprehensive interview session tailored to your selected profession and technology stack. The questions are carefully curated to match your chosen difficulty level and will help you prepare for real-world technical interviews.</p>
+                <p>You'll face a mix of theoretical concepts and practical scenarios, designed to enhance your understanding and confidence. Our AI-powered system will provide instant feedback and detailed explanations for each response.</p>
+                <p>Ready to showcase your skills? Click the button below to begin your personalized interview experience.</p>
+                <button class="start-button" onclick="startInterview()">Start Interview</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: contact@interviewprep.pro</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Interview Street, Career City, 12345</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const profession = urlParams.get('profession');
+        const technology = urlParams.get('technology');
+
+        // Update the values in the form
+        document.getElementById('selected-profession').textContent = profession || 'Not selected';
+        document.getElementById('selected-technology').textContent = technology || 'Not selected';
+    </script>
+</body>
+</html>

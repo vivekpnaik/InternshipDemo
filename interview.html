@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Interview - InterviewPrep Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="interview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="interview-container">
+        <div class="interview-header">
+            <div class="company-logo">
+                <img src="logo.png" alt="InterviewPrep Pro">
+                InterviewPrep Pro
+            </div>
+            <div class="timer" id="timer">00:00</div>
+        </div>
+
+        <div class="interview-content">
+            <div class="video-section">
+                <div class="video-container">
+                    <video id="userVideo" autoplay muted playsinline></video>
+                    <div class="user-info">
+                        <i class="fas fa-user"></i>
+                        Candidate
+                        <span id="profession">Loading...</span>
+                    </div>
+                    <div class="interview-ended" id="interviewEnded">
+                        <h2>Your Interview Has Ended</h2>
+                        <p>Thank you for participating!</p>
+                    </div>
+                </div>
+                <div class="video-controls">
+                    <button class="control-button mute-button" id="muteButton" title="Mute/Unmute">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="control-button end-call" id="endCallButton" title="End Interview">
+                        <i class="fas fa-phone-slash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="audio-visualizer">
+                    <div class="visualizer-circle">
+                        <div class="audio-lines" id="audioLines">
+                            <!-- Audio lines will be added dynamically -->
+                        </div>
+                    </div>
+                    <div class="status">Listening</div>
+                </div>
+                <div class="response-box" id="responseBox">
+                    <!-- AI responses will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="interview.js"></script>
+</body>
+</html>
